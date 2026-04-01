@@ -1,0 +1,687 @@
+# Instincts generated from https://github.com/entrepeneur4lyf/wavev3
+# Generated: 2026-04-01T12:34:17.294Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: wavev3-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Commit Length
+
+## Action
+
+Keep commit messages concise (~47 characters)
+
+## Evidence
+
+- Average commit message length: 47 chars
+- Based on 200 commits
+
+---
+id: wavev3-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: wavev3-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: wavev3-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Export Style
+
+## Action
+
+Prefer default exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: default
+
+---
+id: wavev3-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: wavev3-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.ts
+
+## Evidence
+
+- File pattern: *.test.ts
+- Consistent across test files
+
+---
+id: wavev3-test-mocking
+trigger: "when mocking dependencies in tests"
+confidence: 0.75
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Test Mocking
+
+## Action
+
+Use msw for mocking
+
+## Evidence
+
+- Mocking pattern detected: msw
+- Consistent across test files
+
+---
+id: wavev3-workflow-database-migration
+trigger: "when modifying the database schema or adding tables"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Workflow Database Migration
+
+## Action
+
+Follow the database-migration workflow:
+1. Create migration file
+2. Update schema definitions
+3. Generate/update types
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: migrations/*
+
+---
+id: wavev3-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: resources/themes/anchor/components/app/*, resources/themes/anchor/components/elements/*, resources/themes/anchor/components/marketing/elements/*
+
+---
+id: wavev3-workflow-refactoring
+trigger: "when refactoring code"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Workflow Refactoring
+
+## Action
+
+Follow the refactoring workflow:
+1. Ensure tests pass before refactor
+2. Refactor code structure
+3. Verify tests still pass
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: src/**/*
+
+---
+id: wavev3-workflow-dependency-update-via-dependabot
+trigger: "when doing dependency update via dependabot"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Workflow Dependency Update Via Dependabot
+
+## Action
+
+Follow the dependency-update-via-dependabot workflow:
+1. Dependabot detects outdated dependency.
+2. Dependabot creates a PR with updated version in lock file.
+3. PR is merged after review.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: package-lock.json, composer.json
+
+---
+id: wavev3-workflow-add-or-update-feature-with-migration
+trigger: "when doing add or update feature with migration"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Workflow Add Or Update Feature With Migration
+
+## Action
+
+Follow the add-or-update-feature-with-migration workflow:
+1. Create or update migration file in wave/database/migrations/
+2. Update related model(s) in wave/src/ or app/Models/
+3. Update admin resource in app/Filament/Resources/
+4. Update related Blade views if necessary
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: wave/database/migrations/*.php, wave/src/*.php, app/Filament/Resources/**/*.php
+
+---
+id: wavev3-workflow-add-or-update-feature-tests
+trigger: "when doing add or update feature tests"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Workflow Add Or Update Feature Tests
+
+## Action
+
+Follow the add-or-update-feature-tests workflow:
+1. Create or update test file(s) in tests/Feature/
+2. Implement tests for models, controllers, or business logic
+3. Run tests to verify correctness
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: tests/Feature/*.php
+
+---
+id: wavev3-workflow-refactor-or-move-core-models
+trigger: "when doing refactor or move core models"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Workflow Refactor Or Move Core Models
+
+## Action
+
+Follow the refactor-or-move-core-models workflow:
+1. Move or refactor model files between app/Models/ and wave/src/
+2. Remove duplicate or legacy code
+3. Update references in related files (commands, tests, views, etc.)
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: app/Models/User.php, wave/src/User.php, wave/src/ActivityLog.php
+
+---
+id: wavev3-workflow-ci-workflow-update
+trigger: "when doing ci workflow update"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Workflow Ci Workflow Update
+
+## Action
+
+Follow the ci-workflow-update workflow:
+1. Edit .github/workflows/*.yml files
+2. Update action versions or fix configuration
+3. Commit and push changes
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: .github/workflows/*.yml
+
+---
+id: wavev3-instinct-file-naming
+trigger: "When creating a new file in the codebase."
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Instinct File Naming
+
+## Action
+
+Name the file using camelCase.
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files: camelCase
+
+---
+id: wavev3-instinct-function-naming
+trigger: "When defining a new function."
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Instinct Function Naming
+
+## Action
+
+Name the function using camelCase.
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions: camelCase
+
+---
+id: wavev3-instinct-class-naming
+trigger: "When defining a new class."
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase.
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes: PascalCase
+
+---
+id: wavev3-instinct-constant-naming
+trigger: "When defining a constant."
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE.
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: wavev3-instinct-import-style
+trigger: "When importing modules in JavaScript files."
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Instinct Import Style
+
+## Action
+
+Use relative import paths.
+
+## Evidence
+
+- Pattern in codeStyle.importStyle: relative
+
+---
+id: wavev3-instinct-export-style
+trigger: "When exporting modules in JavaScript files."
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Instinct Export Style
+
+## Action
+
+Use default exports.
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle: default
+
+---
+id: wavev3-instinct-test-file-pattern
+trigger: "When creating a new test file."
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Instinct Test File Pattern
+
+## Action
+
+Name the test file with the pattern *.test.ts.
+
+## Evidence
+
+- Pattern in testing.filePattern: *.test.ts
+
+---
+id: wavev3-instinct-test-type-unit
+trigger: "When writing tests."
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Instinct Test Type Unit
+
+## Action
+
+Write unit tests as the primary test type.
+
+## Evidence
+
+- Pattern in testing.testTypes: unit
+
+---
+id: wavev3-instinct-mocking-msw
+trigger: "When mocking API calls in tests."
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Instinct Mocking Msw
+
+## Action
+
+Use msw (Mock Service Worker) for mocking.
+
+## Evidence
+
+- Pattern in testing.mockingStyle: msw
+
+---
+id: wavev3-instinct-feature-test-location
+trigger: "When adding tests for a feature."
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Instinct Feature Test Location
+
+## Action
+
+Place feature tests in tests/Feature/ directory.
+
+## Evidence
+
+- Pattern in workflow add-or-update-feature-tests.filesInvolved: tests/Feature/*.php
+
+---
+id: wavev3-instinct-commit-prefix
+trigger: "When writing a commit message."
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Instinct Commit Prefix
+
+## Action
+
+Start the commit message with a prefix such as feat, fix, or build.
+
+## Evidence
+
+- Pattern in commits.prefixes: feat, fix, build
+- Example: feat: Add plan-based feature limits (quotas) (#351)
+
+---
+id: wavev3-instinct-commit-length
+trigger: "When writing a commit message."
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, around 47 characters on average.
+
+## Evidence
+
+- Pattern in commits.averageLength: 47
+
+---
+id: wavev3-instinct-commit-format-scope
+trigger: "When the commit affects a specific module or dependency."
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Instinct Commit Format Scope
+
+## Action
+
+Use the format type(scope): message, e.g., build(deps): bump rollup.
+
+## Evidence
+
+- Example: build(deps): bump rollup from 4.40.1 to 4.59.0 (#360)
+
+---
+id: wavev3-instinct-dependency-update
+trigger: "When Dependabot opens a PR for an outdated dependency."
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Instinct Dependency Update
+
+## Action
+
+Review and merge the PR after verifying the update in package-lock.json or composer.json.
+
+## Evidence
+
+- Workflow: dependency-update-via-dependabot
+- Pattern in workflow filesInvolved: package-lock.json, composer.json
+
+---
+id: wavev3-instinct-feature-with-migration
+trigger: "When adding or updating a feature that requires a database schema change."
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Instinct Feature With Migration
+
+## Action
+
+Create or update migration file, update related models, admin resources, and Blade views as needed.
+
+## Evidence
+
+- Workflow: add-or-update-feature-with-migration
+- Pattern in workflow filesInvolved: wave/database/migrations/*.php, wave/src/*.php, app/Filament/Resources/**/*.php, resources/themes/anchor/**/*.blade.php
+
+---
+id: wavev3-instinct-feature-tests
+trigger: "When a new feature is added or modified."
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Instinct Feature Tests
+
+## Action
+
+Add or update automated tests in tests/Feature/ to ensure coverage.
+
+## Evidence
+
+- Workflow: add-or-update-feature-tests
+- Pattern in workflow filesInvolved: tests/Feature/*.php
+
+---
+id: wavev3-instinct-refactor-core-models
+trigger: "When improving codebase structure or removing legacy code."
+confidence: 0.88
+domain: workflow
+source: repo-analysis
+source_repo: entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Instinct Refactor Core Models
+
+## Action
+
+Refactor, consolidate, or move core models and update all references.
+
+## Evidence
+
+- Workflow: refactor-or-move-core-models
+- Pattern in workflow filesInvolved: app/Models/User.php, wave/src/User.php, wave/src/ActivityLog.php, wave/src/Console/Commands/*.php, tests/Feature/*.php
+
+---
+id: wavev3-instinct-ci-workflow-update
+trigger: "When GitHub Actions workflows are deprecated or require configuration updates."
+confidence: 0.92
+domain: workflow
+source: repo-analysis
+source_repo: entrepeneur4lyf/wavev3
+---
+
+# Wavev3 Instinct Ci Workflow Update
+
+## Action
+
+Edit .github/workflows/*.yml files to update action versions or fix configuration.
+
+## Evidence
+
+- Workflow: ci-workflow-update
+- Pattern in workflow filesInvolved: .github/workflows/*.yml
+
